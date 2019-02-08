@@ -1,0 +1,108 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style type="text/css">
+	body{
+		
+		background: #333;
+		margin-top: 50px;
+		
+	}
+	
+	.w1{
+		background: #ff6666;
+	}
+	.w2{
+		background: #85e0e0;
+	}
+	.w3{
+		background: #80ff80;
+	}
+	img{
+		border-radius: 100%;
+		width: 200px;
+		margin-left: 25%;
+
+
+	}
+	.w4{
+		font-family:stencil;
+	}
+	</style>
+<title >weight convertor</title>
+</head>
+	<body>
+		<img src="weight.jpg" alt="weight" ><br><br>
+		
+		<center>
+			
+			
+		<div class="container" >
+			<div class="row">
+				<div class="col-md-6">
+					<h1 style="color:white"class="display-4 text-center" "w4">WEIGHT CONVERTOR</h1>
+					<form>
+						<div class="form-group">
+							<input type="number" class="form-control" "form-control-lg" placeholder="Enter pound weight" id="ip1" onmouseover="fun1(this)" onmouseout="fun2(this)">
+						</div>
+					</form>
+					<div id="out">
+						<div class="card" style="background:#85e0e0">
+							<div class="card-block">
+								<h4 class="w4">Grams</h4>
+								<div id="gout" class="w4"></div>
+							</div>
+						</div><br>
+						
+
+						<div class="card" style="background:#80ff80">
+		
+							<div class="card-block">
+								<h4 class="w4">KiloGrams</h4>
+								<div id="kggout" class"w4"></div>
+							</div>
+						</div><br>
+						<div class="card" style="background:#ff6666">
+							<div class="card-block">
+								<h4 class="w4">ounces</h4>
+								<div id="ozgout" class="w4"></div>
+							</div>
+
+						</div>
+						
+					</div>
+						
+
+					</div>
+					</div>
+				
+				</center>
+				<script type="text/javascript">
+				function fun1(x){
+					x.style.background="yellow";
+
+				}
+				function fun2(x){
+					x.style.background="white";
+
+				}
+
+				document.getElementById("out").style.visibility="hidden";
+				document.getElementById("ip1").addEventListener("input",function  (e) {
+					document.getElementById("out").style.visibility="visible";
+					var ipno=e.target.value;
+					document.getElementById("gout").innerHTML=ipno/0.0022046;
+
+					document.getElementById("kggout").innerHTML=ipno/2.2046;
+					document.getElementById("ozgout").innerHTML=ipno*16;
+					
+					// body...
+				})
+				</script>
+			</body>
+			</html>
+
+
+						
+
+
